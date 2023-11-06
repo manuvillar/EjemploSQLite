@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5sp">
+
+    <ImageView
+        android:id="@+id/idImagen"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        app:srcCompat="@drawable/ic_barcode_product"
+        tools:ignore="VectorDrawableCompat" />
+
+    <EditText
+        android:id="@+id/et_codigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Código del producto"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_producto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Producto"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_precio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Precio del producto"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/id_botonGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Registrar"
+        android:text="Registrar Producto" />
+
+    <Button
+        android:id="@+id/id_botonbuscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Buscar"
+        android:text="Buscar Producto" />
+
+    <Button
+        android:id="@+id/id_botonModificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Modificar"
+        android:text="Modificar Producto" />
+
+    <Button
+        android:id="@+id/id_botonEliminar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Eliminar"
+        android:text="Eliminar Producto" />
+
+</LinearLayout>
