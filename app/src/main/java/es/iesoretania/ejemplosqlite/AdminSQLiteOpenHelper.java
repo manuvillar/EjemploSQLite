@@ -7,17 +7,21 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
-    public AdminSQLiteOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public AdminSQLiteOpenHelper(@Nullable Context context, @Nullable String name,
+                                 @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table articulos(codigo int primary key, producto text, precio real)");
+        db.execSQL("CREATE TABLE articulos (codigo INTEGER PRIMARY KEY, producto TEXT NOT NULL, " +
+                "precio REAL NOT NULL)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS articulos");
+        onCreate(db);
     }
+
 }
